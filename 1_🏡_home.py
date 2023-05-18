@@ -2,6 +2,7 @@
 from pathlib import Path
 
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
 
 # ------------ PATH SETTINGS ----------
@@ -34,20 +35,19 @@ PROJECTS = {
     "🏆 This resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
 }
 
-
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
-st.title("Hello There")
+st.title("Hello There !Compelete Home page")
 
 
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
 
-with open(css_file) as f:
-    st.markdown(f"<style>{f.read()}</style", unsafe_allow_html=True)
-
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
+
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 profile_pic = Image.open(profile_pic)
 
@@ -84,7 +84,7 @@ for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
 # ------- EXPERIENCE AND QUALIFS --------
 
 st.write("#")
-st.subheader('About me')
+st.subheader('About me 🛝')
 st.write(
     """
     - ✔️ **4 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans </span> (Details in Background page)
@@ -98,7 +98,7 @@ st.image(my_zone_pic)
 st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
 # --- SKILLS ---
 st.write('\n')
-st.subheader("Hard Skills")
+st.subheader("Hard Skills 🔬")
 st.write(
     """
 - 👩‍💻 Programming: Python, SQL, pySpark
@@ -112,7 +112,7 @@ st.write(
 
 # --------- work history ---------
 st.write("#")
-st.subheader("Recent Job Experience")
+st.subheader("Recent Job Experience 🧑‍💻")
 st.write('---')
 
 st.write('\n')
@@ -129,9 +129,17 @@ st.write(
 """ , unsafe_allow_html=True
 )
 
+
+
 # --- Projects & Accomplishments ---
 st.write('\n')
-st.subheader("Personal Projects")
+st.subheader("Personal Projects 🧙‍♂️")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+st.write("""🏆 More in Personal Projects page """)
+
+personal_project = st.button("Go to Personal Projects")
+if personal_project:
+    switch_page("Personal Projects")
