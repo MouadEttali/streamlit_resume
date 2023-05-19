@@ -38,7 +38,17 @@ PROJECTS = {
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
-st.title("Hello There !Compelete Home page")
+st.title("Hello There")
+
+# --------------- HELPER FUNCTIONS -----------------------
+def V_SPACE(lines):
+    for _ in range(lines):
+        st.write('&nbsp;')
+
+def go_to_full_page(label,page):
+    personal_project = st.button(label)
+    if personal_project:
+        switch_page(page)
 
 
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
@@ -74,7 +84,7 @@ with cols[1]:
 
 # -------- SOCIALS ---------
 
-st.write("#")
+V_SPACE(1)
 
 cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
@@ -83,11 +93,11 @@ for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
 
 # ------- EXPERIENCE AND QUALIFS --------
 
-st.write("#")
+V_SPACE(1)
 st.subheader('About me 🛝')
 st.write(
     """
-    - ✔️ **4 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans </span> (Details in Background page)
+    - ✔️ **3 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans </span> (Details in Professional Experiences)
     - ✔️ Built multiple ML based web applications (D3js, Streamlit) with deployment in AWS, Heroku 
     - ✔️ Expertise in statistical principles and classical ML models
     - ✔️ Product and value oriented mindset ( my dream is to build valuable ML tools, my nightmare is models dying in notebooks )  
@@ -104,14 +114,15 @@ st.write(
 - 👩‍💻 Programming: Python, SQL, pySpark
 - 🧪 Data science : Machine Learning, Ensemble methods (Bagging, Boosting) / kernel methods (SVM, SPCA), Deep Learning, Natural Language Processing, Optimisation
 - 📊 Data Visulization: PowerBi, Qlicksense, D3js
-- 📚 Modeling: Logistic regression, linear regression, decition trees
-- 🗄️ Databases: Postgres, MongoDB, MySQL
+- 📚 Transfer Learning: LLMS, CNNs, Transformers ...
+- 🗄️ Databases: Postgres, MongoDB, MySQL (on Premise and Cloud)
 - ☁️ Cloud : AWS (Certified Cloud Practitioner (CLF)), Palantir Foundry
 """
 )
+go_to_full_page("See my certifications and trainings" , "Certifications")
 
 # --------- work history ---------
-st.write("#")
+V_SPACE(1)
 st.subheader("Recent Job Experience 🧑‍💻")
 st.write('---')
 
@@ -129,6 +140,7 @@ st.write(
 """ , unsafe_allow_html=True
 )
 
+go_to_full_page("Check out all my experiences" , "Professional Experiences")
 
 
 # --- Projects & Accomplishments ---
@@ -140,6 +152,6 @@ for project, link in PROJECTS.items():
 
 st.write("""🏆 More in Personal Projects page """)
 
-personal_project = st.button("Go to Personal Projects")
-if personal_project:
-    switch_page("Personal Projects")
+
+
+go_to_full_page("Go to Personal Projects" , "Personal Projects")
