@@ -30,7 +30,7 @@ SOCIAL_MEDIA = {
 }
 PROJECTS = {
     "🏆 Dimensionality reduction/clustering of data from scientific articles/ wikipedia summaries/news headlines": "https://github.com/MouadEttali/NLP-and-Text_Mining",
-    "🏆 Implementation of a neural network for semi-supervised learning to predict MNIS data": "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject",
+    "🏆 Implementation of a neural network for semi-supervised learning to predict MNIST data": "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject",
     "🏆 Implementation of multiple regression and logistic regression algorithms from the mathematical foundations. ": "https://github.com/MouadEttali/From-scratch-machine-learning---From-mathematical-formulas-to-functioning-algorithms",
     "🏆 This resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
 }
@@ -117,6 +117,7 @@ st.write(
 - 📚 Transfer Learning: LLMS, CNNs, Transformers ...
 - 🗄️ Databases: Postgres, MongoDB, MySQL (on Premise and Cloud)
 - ☁️ Cloud : AWS (Certified Cloud Practitioner (CLF)), Palantir Foundry
+- 🚀 Deployment : Docker, Heroku, AWS 
 """
 )
 go_to_full_page("See my certifications and trainings" , "Certifications")
