@@ -154,5 +154,4 @@ for project, link in PROJECTS.items():
 st.write("""🏆 More in Personal Projects page """)
 
 
-
 go_to_full_page("Go to Personal Projects" , "Personal Projects")
