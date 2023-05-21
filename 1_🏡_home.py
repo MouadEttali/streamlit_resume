@@ -12,9 +12,9 @@ css_file = current_dir / "styles" / "main.css"
 
 resume_file = current_dir / "assets" / "cv.pdf"
 
-profile_pic = current_dir / "assets" / "profile-pic.png"
+profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
 
-my_zone_pic = current_dir / "assets" / "my_zone.png"
+my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Digital CV | Et-tali Mouad"

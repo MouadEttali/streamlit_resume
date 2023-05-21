@@ -61,13 +61,16 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="centered")
 
 # ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent.parent
+
 css_file = current_dir / "styles" / "main.css"
 
-esi_pic = Image.open(current_dir / "assets" / "esi.jpg")
+uni_pic = Image.open(current_dir / "assets" / "academic" / "uni.jpg")
 
-paris_pic = Image.open(current_dir / "assets" / "paris.jpg")
+esi_pic = Image.open(current_dir / "assets" / "academic" / "esi.jpg")
 
-bac_pic = Image.open(current_dir / "assets" / "bac.jpg")
+paris_pic = Image.open(current_dir / "assets" / "academic" / "paris.jpg")
+
+bac_pic = Image.open(current_dir / "assets" / "academic" / "bac.jpg")
 
 
 st.title("Academic Background")
@@ -98,7 +101,7 @@ with open(css_file) as f:
 cols = st.columns(2, gap='small')
 
 with cols[0]:
-    st.image("https://u-paris.fr/wp-content/uploads/2022/03/SiegeUP_1920-1.jpg")
+    st.image(uni_pic)
 
 
 with cols[1]:
