@@ -14,16 +14,45 @@ css_file = current_dir / "styles" / "main.css"
 PAGE_TITLE = "Personal Projects | Et-tali Mouad"
 PAGE_ICON = "🏛"
 
-#-------- WORK EXPERIENCE CONTENT----------
+#-------- PERSONAL PROJECTS CONTENT----------
 NLP_PROJECT_TITLE = "Dimensionality reduction and clustering of scientific articles/wikipedia summaries/news headlines"
+NLP_PROJECT_LINK = "https://github.com/MouadEttali/NLP-and-Text_Mining"
 NLP_PROJECT_KEYWORDS = "NLP, text mining, clustering, dimensionality reduction, interprability, Word2Vec, GloVe, BERT, RoBERTa"
 NLP_PROJECT_STACK = "PCA, t-SNE, UMAP, Autoencoders, Kmeans, Spherical Kmeans, factorial Kmeans, Hierarchal clustering (WARD, Complete, Linkage, Single Metrics), HDBSCAN, Reduced kmeans, Deep Clustering Network, deep KMeans"
 NLP_PROJECT_DESCRIPTION = """
     - ✔  The project consists of two parts :
         - 💠Part 1: Text Analysis and Clustering without Dimensionality Reduction 
-            - 🔸 Textual analysis and exploratory data analysis (EDA) of resumes
-            - 🔸 Clustering on the original resume data using different clustering algorithms
+            - 🔸 Textual analysis and exploratory data analysis (EDA) of Scientific articles/News Headlines
+            - 🔸 Clustering on the original data using different clustering algorithms
             - 🔸 Benchmarking the results for later comparison
+        - 💠Part 2: Second Analysis and Clustering with Dimensionality Reduction
+            - 🔸Tokenizing the data using Word2Vec, GloVe, BERT, and RoBERTa
+            - 🔸Applying dimensionality reduction techniques (PCA, t-SNE, UMAP, Autoencoders)
+            - 🔸Performing clustering on the reduced-dimensional data using various clustering algorithms.
+    - 💡The goal is to gain insights from this data and identify clusters of similar articles/News based on their content, enabling better understanding and organization of of this sort of corpus for various purposes.
+    """ 
+
+NN_PROJECT_TITLE = "Implementation of a neural network for semi-supervised learning to predict MNIST data"
+NN_PROJECT_LINK = "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject"
+NN_PROJECT_KEYWORDS = "Neural Networks, Semi-supervised Learning, Multi-class classification"
+NN_PROJECT_STACK = "Tensorflow, Keras, Scikit-learn, Numpy"
+NN_PROJECT_DESCRIPTION = """
+    -  ✔  Implemented a neural network for MNIST data prediction with only <span style="color:#19A7CE; font-size: 15;">**100 labeled images**</span> using the semi-supervised learning method proposed in the scientific paper "Pseudo-label: The simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks".
+    -  ✔  Following the same approach as the article, the project utilizes pseudo-labels as the real labels in the learning process to maximize prediction and classify unlabeled data.
+    -  ✔  The project considers pseudo-labeling as a prerequisite for semi-supervised learning, leveraging both labeled and unlabeled data simultaneously to train the neural network and <span style="color:#19A7CE; font-size: 15;">**achieve higher accuracy during testing.**</span>
+    -  ✔  By incorporating the semi-supervised learning technique, the algorithm offers improved accuracy by effectively utilizing both labeled and unlabeled data in the training process and achieves a <span style="color:#19A7CE; font-size: 15;">**76.95% accuracy.**</span>
+    """ 
+
+ML_algos_PROJECT_TITLE = "Implementation of machine learning algorithms using numpy from mathematical foundations"
+ML_algos_PROJECT_LINK = "https://github.com/MouadEttali/From-scratch-machine-learning---From-mathematical-formulas-to-functioning-algorithmst"
+ML_algos_PROJECT_KEYWORDS = "Coding, Machine Learning, First Principles"
+ML_algos_PROJECT_STACK = "Numpy, Python"
+ML_algos_PROJECT_DESCRIPTION = """
+    - ✔ I coded a few classical machine learning models from scratch, starting from their basic mathematical fundamentals, and then translating that into python code.
+    - ✔ Purpose :
+        - 💠 Gaining a deeper understanding and insight into the inner workings of these algorithms.
+        - 💠 Developing a higher level of understanding regarding their use cases, strengths, weaknesses, and various implementations.
+    - ✔ Completed Algorithms: Linear Regression, Multiple Linear Regression, Logistic Regression, KNN and Support Vector Machine. Continual updates and exploration of other algorithms are in progress.
     """ 
 # --------------------------------------
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
@@ -31,14 +60,14 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 st.title("Personal Projects")
 # --------------- HELPER FUNCTIONS -----------------------
 
-def personal_project_section(PROJECT_TITLE,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION):
+def personal_project_section(PROJECT_TITLE,PROJECT_LINK,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION):
 
-    st.subheader(PROJECT_TITLE)
+    st.subheader(f"[{PROJECT_TITLE}]({PROJECT_LINK})")
     st.write('---')
-    st.write(f'''**Keywords :** {PROJECT_KEYWORDS}''', unsafe_allow_html=True)
+    st.write(f'''<span style="color:#f50057; font-size: 15;">**Keywords :**</span> {PROJECT_KEYWORDS}''', unsafe_allow_html=True)
     
     st.write(PROJECT_DESCRIPTION, unsafe_allow_html=True)
-    st.write(f'''**Technologies Used :** {PROJECT_STACK}''', unsafe_allow_html=True)
+    st.write(f'''<span style="color:#f50057; font-size: 15;">**Technologies Used :**</span> {PROJECT_STACK}''', unsafe_allow_html=True)
     st.write('\n')
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
 
@@ -49,16 +78,16 @@ with open(css_file) as f:
 # ------ HERO SECTION -----------
 
 # ------ Projet 1 SECTION ---------
-personal_project_section(NLP_PROJECT_TITLE,NLP_PROJECT_KEYWORDS,NLP_PROJECT_STACK,NLP_PROJECT_DESCRIPTION)
+personal_project_section(NLP_PROJECT_TITLE,NLP_PROJECT_LINK,NLP_PROJECT_KEYWORDS,NLP_PROJECT_STACK,NLP_PROJECT_DESCRIPTION)
 st.write('----')
-# ------ ASTEK SECTION ---------
+# ------ Project 2 SECTION ---------
 # personal_project_section(PROJECT_TITLE,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION)
-
-# st.write('----')
+personal_project_section(NN_PROJECT_TITLE,NN_PROJECT_LINK,NN_PROJECT_KEYWORDS,NN_PROJECT_STACK,NN_PROJECT_DESCRIPTION)
+st.write('----')
 
 # #------ Alexsys Solutions SECTION
-# personal_project_section(PROJECT_TITLE,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION)
-
+personal_project_section(ML_algos_PROJECT_TITLE,ML_algos_PROJECT_LINK,ML_algos_PROJECT_KEYWORDS,ML_algos_PROJECT_STACK,ML_algos_PROJECT_DESCRIPTION)
+st.write('----')
 # st.write('----')
 # #------ Digital Advisor SECTION
 # personal_project_section(PROJECT_TITLE,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION)

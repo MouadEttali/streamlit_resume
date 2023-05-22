@@ -14,6 +14,7 @@ ALEXSYS_PIC_PATH = current_dir / "assets" / "work" /  "alexsys" / "alexsys.png"
 DADVISOR_PIC_PATH = current_dir / "assets" / "work" /  "digitaladvisor" / "digitaladvisor.png"
 preview_aqsone = [f"""{current_dir}/assets/work/aqsone/{example}""" for example in ['example_1.png','example_2.png']]
 preview_astek = [f"""{current_dir}/assets/work/astek/{example}""" for example in ['navigation.png','activity.png','database.png','sensor.png','data.png']]
+preview_alexsys = [f"""{current_dir}/assets/work/alexsys/{example}""" for example in ['home.png','auth.png','add_person.png']]
 
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Work Experiences | Et-tali Mouad"
@@ -61,9 +62,9 @@ DADVISOR_PIC  = Image.open(DADVISOR_PIC_PATH)
 DADVISOR_COMPANY = "DigitalAdvisor"
 DADVISOR_PERIOD = "01/2020 - 08/2020"
 DADVISOR_DESCRIPTION = """
-    - ► Implemented a multiclass classification model to predict the types of failures of industrial machines 86% Accuracy 79% F1 score.
-    - ► Implemented a regression model to predict the Remaining Useful Time of industrial machines  using the algorithms: XGBoost, Random Forest and Support Vector Machine.
-    - ► Participated in the development of a real time monitoring application for industrial machines.
+    - ► Implemented a multiclass classification model to predict  <span style="color:#f50057; font-size: 15;">**the types of failures of industrial machines**</span> 86% Accuracy 79% F1 score.
+    - ► Implemented a regression model to predict <span style="color:#f50057; font-size: 15;">**the Remaining Useful Time of industrial machines**</span>  using the algorithms: XGBoost, Random Forest and Support Vector Machine.
+    - ► Participated in the development of a real time monitoring application for industrial machines using Flask.
     """ 
 # --------------------------------------
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
@@ -110,7 +111,12 @@ st.write('----')
 
 #------ Alexsys Solutions SECTION
 work_experience_section(ALEXSYS_PIC,COMMUN_ROLE,ALEXSYS_COMPANY,ALEXSYS_PERIOD,ALEXSYS_DESCRIPTION)
-
+with st.expander("**Preview of deliverables :** "):
+    images = [Image.open(image) for image in preview_alexsys]
+    cols = st.columns(len(images))
+    for col,image in zip(cols,images):
+        with col:
+            st.image(image,width=400)
 st.write('----')
 #------ Digital Advisor SECTION
 work_experience_section(DADVISOR_PIC,COMMUN_ROLE,DADVISOR_COMPANY,DADVISOR_PERIOD,DADVISOR_DESCRIPTION)
