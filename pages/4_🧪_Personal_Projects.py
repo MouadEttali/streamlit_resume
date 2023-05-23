@@ -9,7 +9,8 @@ from PIL import Image
 current_dir = Path(__file__).parent.parent
 css_file = current_dir / "styles" / "main.css"
 
-
+E2E_PIC_PATH = current_dir / "assets" / "personal_projects" / "e2e.png"
+THREE_MODELS_PIC_PATH = current_dir / "assets" / "personal_projects" / "three_models.png"
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Personal Projects | Et-tali Mouad"
 PAGE_ICON = "🏛"
@@ -54,6 +55,30 @@ ML_algos_PROJECT_DESCRIPTION = """
         - 💠 Developing a higher level of understanding regarding their use cases, strengths, weaknesses, and various implementations.
     - ✔ Completed Algorithms: Linear Regression, Multiple Linear Regression, Logistic Regression, KNN and Support Vector Machine. Continual updates and exploration of other algorithms are in progress.
     """ 
+E2E_PIC  = Image.open(E2E_PIC_PATH)
+E2E_FLASK_PROJECT_TITLE = "End to End chrun prediction using Flask and aws"
+E2E_FLASK_PROJECT_LINK = "https://github.com/MouadEttali/End_to_END_churn_predictor"
+E2E_FLASK_PROJECT_KEYWORDS = "Machine Learning application, Deployement, API"
+E2E_FLASK_PROJECT_STACK = "Python, Flask, AWS"
+E2E_FLASK_PROJECT_DESCRIPTION = """
+    - ✔ I trained a model to predict Employee attrition based on multiple factors. such as Satisfaction Level, Number of Projects, Salary...
+    - ✔ Wrote the REST API and coded a simple UI frontend for this ML project
+    - ✔ Deployed it on AWS EC2 instance 
+    """ 
+THREE_MODELS_PIC  = Image.open(THREE_MODELS_PIC_PATH)
+THREE_MODELS_PROJECT_TITLE = "Streamlit machine learning application that contains 3 models for predicting Diabetes , Parkinson's and Heart Disease"
+THREE_MODELS_PROJECT_LINK = "https://github.com/MouadEttali/streamlitHerokuApp"
+THREE_MODELS_PROJECT_KEYWORDS = "Machine Learning application"
+THREE_MODELS_PROJECT_STACK = "Python, Streamlit"
+THREE_MODELS_PROJECT_DESCRIPTION = """
+    - ✔ I trained binary classifiers such as Logistic regression and SVM to give an accurate prediction of these 3 of diseases :
+    - ✔ The data contains fields such as insulin level, age,chest pain levels ...
+    - ✔ Performances
+        -💠Diabetes data : 89% recall, 91% precision
+        -💠Parkinsons data : 85% recall, 89% precision
+        -💠Heart Disease data : 91% recall, 96% precision
+    - ✔ Deployed the application using Heroku
+    """ 
 # --------------------------------------
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
@@ -85,11 +110,18 @@ st.write('----')
 personal_project_section(NN_PROJECT_TITLE,NN_PROJECT_LINK,NN_PROJECT_KEYWORDS,NN_PROJECT_STACK,NN_PROJECT_DESCRIPTION)
 st.write('----')
 
-# #------ Alexsys Solutions SECTION
+# #------ Project 3 SECTION
 personal_project_section(ML_algos_PROJECT_TITLE,ML_algos_PROJECT_LINK,ML_algos_PROJECT_KEYWORDS,ML_algos_PROJECT_STACK,ML_algos_PROJECT_DESCRIPTION)
 st.write('----')
-# st.write('----')
-# #------ Digital Advisor SECTION
-# personal_project_section(PROJECT_TITLE,PROJECT_KEYWORDS,PROJECT_STACK,PROJECT_DESCRIPTION)
 
-# st.write('----')
+#------ Project 4 SECTION
+personal_project_section(E2E_FLASK_PROJECT_TITLE,E2E_FLASK_PROJECT_LINK,E2E_FLASK_PROJECT_KEYWORDS,E2E_FLASK_PROJECT_STACK,E2E_FLASK_PROJECT_DESCRIPTION)
+with st.expander("**Preview of deliverables :** "):
+    st.image(E2E_PIC,width=1000)
+st.write('----')
+
+#------ Project 4 SECTION
+personal_project_section(THREE_MODELS_PROJECT_TITLE,THREE_MODELS_PROJECT_LINK,THREE_MODELS_PROJECT_KEYWORDS,THREE_MODELS_PROJECT_STACK,THREE_MODELS_PROJECT_DESCRIPTION)
+with st.expander("**Preview of deliverables :** "):
+    st.image(THREE_MODELS_PIC,width=1000)
+st.write('----')

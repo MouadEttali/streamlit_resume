@@ -137,7 +137,7 @@ st.image(esi_pic, caption="Building connections in Engineering University (I had
 st.write('----')
 
 create_background_section(PREP_ICON,PREP_TITLE,PREP_PERIOD,PREP_DESCRIPTION)
-st.write("""***PS: no picture for prep school period on purpose (if you know you know)*** 🙃""",unsafe_allow_html=True)
+st.write("""<span style="color:#19A7CE; font-size: 15;">***PS: no picture for prep school period on purpose (if you know you know)*** </span>🙃""",unsafe_allow_html=True)
 st.write('----')
 
 create_background_section(BAC_ICON,BAC_TITLE,BAC_PERIOD,BAC_DESCRIPTION)
