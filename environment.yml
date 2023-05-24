@@ -4,4 +4,5 @@ channels:
 dependencies:
   - streamlit
   - pillow
+  - streamlit-extras
 prefix: C:\Users\aqson\anaconda3\envs\streamlit_resume
