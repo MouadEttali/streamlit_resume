@@ -151,7 +151,6 @@ st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
 
-st.write("""🏆 More in Personal Projects page """)
 
 
-go_to_full_page("Go to Personal Projects" , "Personal Projects")
+go_to_full_page("More Personal Projects" , "Personal Projects")
