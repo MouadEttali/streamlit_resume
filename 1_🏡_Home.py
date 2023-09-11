@@ -97,8 +97,8 @@ V_SPACE(1)
 st.subheader('About me 🛝')
 st.write(
     """
-    - ✔️ **3 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans </span> (Details in Professional Experiences)
-    - ✔️ Built multiple ML based web applications (D3js, Streamlit) with deployment in AWS, Heroku 
+    - ✔️ **3 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans, Allegro Musique </span> (Details in Professional Experiences)
+    - ✔️ Built multiple ML based web applications (Python, Javascript, D3js, Streamlit) with deployment in AWS **(Sagemaker, API Gateway, Lamnda).** 
     - ✔️ Expertise in statistical principles and classical ML models
     - ✔️ Product and value oriented mindset ( my dream is to build valuable ML tools, my nightmare is models dying in notebooks )  
     - ✔️ Work feels best when it's **challenging enough to push me and not easy enough to make me bored**
