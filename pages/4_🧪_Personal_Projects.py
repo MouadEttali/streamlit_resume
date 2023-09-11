@@ -44,8 +44,6 @@ NN_PROJECT_DESCRIPTION = """
     -  ✔  By incorporating the semi-supervised learning technique, the algorithm offers improved accuracy by effectively utilizing both labeled and unlabeled data in the training process and achieves a <span style="color:#19A7CE; font-size: 15;">**76.95% accuracy.**</span>
     """ 
 
-ML_algos_PROJECT_TITLE = "Implementation of machine learning algorithms using numpy from mathematical foundations"
-ML_algos_PROJECT_LINK = "https://github.com/MouadEttali/From-scratch-machine-learning---From-mathematical-formulas-to-functioning-algorithmst"
 ML_algos_PROJECT_TITLE = "Implementation of machine learning algorithms using numpy from mathematical foundations (link)"
 ML_algos_PROJECT_LINK = "https://github.com/MouadEt-tali/From-scratch-MlAlgorithms"
 ML_algos_PROJECT_KEYWORDS = "Coding, Machine Learning, First Principles"
