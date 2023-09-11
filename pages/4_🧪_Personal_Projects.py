@@ -16,7 +16,7 @@ PAGE_TITLE = "Personal Projects | Et-tali Mouad"
 PAGE_ICON = "🏛"
 
 #-------- PERSONAL PROJECTS CONTENT----------
-NLP_PROJECT_TITLE = "Dimensionality reduction and clustering of scientific articles/wikipedia summaries/news headlines"
+NLP_PROJECT_TITLE = "Dimensionality reduction and clustering of scientific articles/wikipedia summaries/news  (link)"
 NLP_PROJECT_LINK = "https://github.com/MouadEttali/NLP-and-Text_Mining"
 NLP_PROJECT_KEYWORDS = "NLP, text mining, clustering, dimensionality reduction, interprability, Word2Vec, GloVe, BERT, RoBERTa"
 NLP_PROJECT_STACK = "PCA, t-SNE, UMAP, Autoencoders, Kmeans, Spherical Kmeans, factorial Kmeans, Hierarchal clustering (WARD, Complete, Linkage, Single Metrics), HDBSCAN, Reduced kmeans, Deep Clustering Network, deep KMeans"
@@ -33,7 +33,7 @@ NLP_PROJECT_DESCRIPTION = """
     - 💡The goal is to gain insights from this data and identify clusters of similar articles/News based on their content, enabling better understanding and organization of of this sort of corpus for various purposes.
     """ 
 
-NN_PROJECT_TITLE = "Implementation of a neural network for semi-supervised learning to predict MNIST data"
+NN_PROJECT_TITLE = "Implementation of a neural network for semi-supervised learning to predict MNIST data (link)"
 NN_PROJECT_LINK = "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject"
 NN_PROJECT_KEYWORDS = "Neural Networks, Semi-supervised Learning, Multi-class classification"
 NN_PROJECT_STACK = "Tensorflow, Keras, Scikit-learn, Numpy"
@@ -46,6 +46,7 @@ NN_PROJECT_DESCRIPTION = """
 
 ML_algos_PROJECT_TITLE = "Implementation of machine learning algorithms using numpy from mathematical foundations"
 ML_algos_PROJECT_LINK = "https://github.com/MouadEttali/From-scratch-machine-learning---From-mathematical-formulas-to-functioning-algorithmst"
+ML_algos_PROJECT_TITLE = "Implementation of machine learning algorithms using numpy from mathematical foundations (link)"
 ML_algos_PROJECT_KEYWORDS = "Coding, Machine Learning, First Principles"
 ML_algos_PROJECT_STACK = "Numpy, Python"
 ML_algos_PROJECT_DESCRIPTION = """
@@ -56,7 +57,7 @@ ML_algos_PROJECT_DESCRIPTION = """
     - ✔ Completed Algorithms: Linear Regression, Multiple Linear Regression, Logistic Regression, KNN and Support Vector Machine. Continual updates and exploration of other algorithms are in progress.
     """ 
 E2E_PIC  = Image.open(E2E_PIC_PATH)
-E2E_FLASK_PROJECT_TITLE = "End to End chrun prediction using Flask and aws"
+E2E_FLASK_PROJECT_TITLE = "End to End chrun prediction using Flask and aws (link)"
 E2E_FLASK_PROJECT_LINK = "https://github.com/MouadEttali/End_to_END_churn_predictor"
 E2E_FLASK_PROJECT_KEYWORDS = "Machine Learning application, Deployement, API"
 E2E_FLASK_PROJECT_STACK = "Python, Flask, AWS"
@@ -66,7 +67,7 @@ E2E_FLASK_PROJECT_DESCRIPTION = """
     - ✔ Deployed it on AWS EC2 instance 
     """ 
 THREE_MODELS_PIC  = Image.open(THREE_MODELS_PIC_PATH)
-THREE_MODELS_PROJECT_TITLE = "Streamlit machine learning application that contains 3 models for predicting Diabetes , Parkinson's and Heart Disease"
+THREE_MODELS_PROJECT_TITLE = "Streamlit machine learning application that contains 3 models for predicting Diabetes , Parkinson's and Heart Disease (link)"
 THREE_MODELS_PROJECT_LINK = "https://github.com/MouadEttali/streamlitHerokuApp"
 THREE_MODELS_PROJECT_KEYWORDS = "Machine Learning application"
 THREE_MODELS_PROJECT_STACK = "Python, Streamlit"
