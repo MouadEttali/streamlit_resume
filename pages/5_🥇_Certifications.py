@@ -8,6 +8,8 @@ from PIL import Image
 # ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent.parent
 css_file = current_dir / "styles" / "main.css"
+
+AWS_ML_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "aws_ml.jpg"
 ML_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "ml_stanford.png"
 NN_DL_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "nn_dl.png"
 DL_TUNE_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "dl_tuning.png"
@@ -19,6 +21,16 @@ PAGE_TITLE = "Certifications | Et-tali Mouad"
 PAGE_ICON = "🏛"
 
 #-------- Certifications CONTENT----------
+AWS_ML_CERTIFICATION_TITLE = "AWS Certified Machine Learning Specialty 2023 - Hands On!"
+AWS_ML_CERTIFICATION_PIC = Image.open(AWS_ML_CERTIFICATION_PIC_PATH)
+AWS_ML_CERTIFICATION_LINK = "https://www.udemy.com/certificate/UC-c0613ef8-6d5c-49aa-8429-c384dfec8d36/"
+AWS_ML_CERTIFICATION_DESCRIPTION = """
+    - ✔  <span style="color:#f50057; font-size: 15;">**AWS Certified Machine Learning Specialty 2023 - Hands On!**</span> is an depth hands on course training for the machine learning specialty certification by aws.
+    - ✔  This certification teaches a wide set of high level ML aws services, their use cases and how to implement them in large scale solutions inside a bigger aws architecture.
+    - ✔  Some of the services include SageMaker, canvas, Comprehend, Forecast, Kinesis, Glue and more. 
+
+    """ 
+
 ML_CERTIFICATION_TITLE = "Machine Learning : Stanford University "
 ML_CERTIFICATION_PIC = Image.open(ML_CERTIFICATION_PIC_PATH)
 ML_CERTIFICATION_LINK = "https://www.coursera.org/account/accomplishments/verify/K52NAQ2FB8Z7"
@@ -83,6 +95,9 @@ with open(css_file) as f:
 
 
 # ------ HERO SECTION -----------
+
+# ------ CERTIFICATION AWS ML SECTION ---------
+certification_section(AWS_ML_CERTIFICATION_TITLE,AWS_ML_CERTIFICATION_LINK,AWS_ML_CERTIFICATION_DESCRIPTION,AWS_ML_CERTIFICATION_PIC)
 
 # ------ CERTIFICATION ML SECTION ---------
 certification_section(ML_CERTIFICATION_TITLE,ML_CERTIFICATION_LINK,ML_CERTIFICATION_DESCRIPTION,ML_CERTIFICATION_PIC)
